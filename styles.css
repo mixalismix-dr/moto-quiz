@@ -235,6 +235,18 @@ h1 {
   background: var(--card-strong);
 }
 
+.site-footer {
+  padding: 20px 8px 0;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  color: rgba(21, 21, 21, 0.5);
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+}
+
 .empty-state {
   display: grid;
   gap: 16px;
