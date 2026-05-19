@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moto Ready | Τεστ Διπλώματος Μοτοσυκλέτας</title>
+    <meta
+      name="description"
+      content="Adaptive quiz εφαρμογή για ερωτήσεις διπλώματος μοτοσυκλέτας με 10 ερωτήσεις ανά τεστ, σκορ και έξυπνη επανάληψη."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Moto Ready</p>
+          <h1>Τεστ μοτοσυκλέτας που μαθαίνει από τα λάθη σου</h1>
+          <p class="hero-text">
+            Δίνεις τεστ 10 ερωτήσεων, βλέπεις άμεσα σκορ και σωστές απαντήσεις, και το σύστημα
+            επαναφέρει περιοδικά τις ερωτήσεις που σε δυσκολεύουν μέχρι να φτάσεις στο 100%.
+          </p>
+        </div>
+
+        <section class="mastery-panel">
+          <div class="mastery-topline">
+            <span>Συνολικό ποσοστό ετοιμότητας</span>
+            <strong id="masteryPercent">0%</strong>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <div class="progress-fill" id="masteryFill"></div>
+          </div>
+          <div class="stat-grid">
+            <article class="stat-card">
+              <span>Τεστ</span>
+              <strong id="quizCount">0</strong>
+            </article>
+            <article class="stat-card">
+              <span>Ερωτήσεις που είδες</span>
+              <strong id="seenCount">0 / 172</strong>
+            </article>
+            <article class="stat-card">
+              <span>Αδυναμίες</span>
+              <strong id="weakCount">172</strong>
+            </article>
+          </div>
+        </section>
+      </header>
+
+      <main class="app-grid">
+        <section class="control-panel">
+          <div class="panel-card">
+            <h2>Εκκίνηση</h2>
+            <p>
+              Κάθε τεστ έχει 10 ερωτήσεις. Το adaptive mode δίνει έξτρα βάρος σε ό,τι απαντήθηκε
+              λάθος ή δεν έχει εμπεδωθεί ακόμα.
+            </p>
+            <div class="button-stack">
+              <button id="startAdaptiveBtn" class="action-btn primary">Νέο adaptive τεστ</button>
+              <button id="startWeakBtn" class="action-btn secondary">Τεστ στις αδυναμίες</button>
+              <button id="resetProgressBtn" class="action-btn ghost">Μηδενισμός προόδου</button>
+            </div>
+          </div>
+
+          <div class="panel-card">
+            <h2>Πώς δουλεύει</h2>
+            <ul class="feature-list">
+              <li>10 ερωτήσεις ανά γύρο.</li>
+              <li>Σκορ στο τέλος στα 10.</li>
+              <li>Αναλυτική λίστα σωστών και λαθών.</li>
+              <li>Στις λάθος απαντήσεις εμφανίζεται η σωστή επιλογή.</li>
+              <li>Η πρόοδος αποθηκεύεται αυτόματα στον browser.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="quiz-panel">
+          <div class="quiz-card" id="appRoot"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./questions.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

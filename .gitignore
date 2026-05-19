@@ -1,0 +1,5 @@
+*.HEIC
+*.png
+converted/
+ocr/
+book_moto_odigisi.pdf
